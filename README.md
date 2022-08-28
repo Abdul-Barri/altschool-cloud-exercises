@@ -1,5 +1,5 @@
 # altschool-cloud-exercises
-This repo contains the submissions to the each exercise in the Altschool Cloud Engineering Lessons.
+This repo contains the submissions to each exercise in the Altschool Cloud Engineering Lessons.
 
 ## Exercise 1
 
