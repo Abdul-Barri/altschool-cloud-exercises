@@ -37,5 +37,3 @@ Instruction:
 
 - Learn how to use the add-apt-repository command
 - Submit the content of /etc/apt/sources.list and the output of php -v command.
-=======
->>>>>>> 7b872416a67bf00a1a4a0e0536c2325c3e1326dc
