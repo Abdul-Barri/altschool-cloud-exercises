@@ -1,5 +1,5 @@
 # altschool-cloud-exercises
-This repo contains the submissions to the each exercise in the Altschool Cloud Engineering Lessons.
+This repo contains the submissions to each exercise in the Altschool Cloud Engineering Lessons.
 
 ## Exercise 1
 
@@ -25,6 +25,7 @@ Instruction: Submit your work in a folder for this exercise in your altschool-cl
 Instruction:
 
 - Submit the contents of /etc/passwd, /etc/group, /etc/sudoers
+<<<<<<< HEAD
 
 ## Exercise 4
 
@@ -36,3 +37,5 @@ Instruction:
 
 - Learn how to use the add-apt-repository command
 - Submit the content of /etc/apt/sources.list and the output of php -v command.
+=======
+>>>>>>> 7b872416a67bf00a1a4a0e0536c2325c3e1326dc
