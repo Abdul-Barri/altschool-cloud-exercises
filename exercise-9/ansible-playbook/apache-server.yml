@@ -1,0 +1,36 @@
+---
+# install Apache2 using Ansible
+- name: Setting up Apache Server on EC2 instance
+  hosts: ec2apache
+  remote_user: ubuntu
+  become: true
+  vars:
+    apache2_version: 2.4.41
+  tasks:
+    - name: install apache2
+      command: apt install apache2 -y
+    - name: start apache2
+      service:
+        name: apache2
+        enabled: yes
+        state: started
+    - name: get installed apache2 version
+      command: apache2 -v
+      register: apache2_version
+    - name: print apache2 version
+      debug:
+        msg: "The current version of Apache2 is {{apache2_version}}"
+    - name: get the status of apache2 service
+      command: systemctl status apache2
+    - name: set timezone to Africa/Lagos
+      command: timedatectl set-timezone Africa/Lagos
+    - name: get status of timezone
+      command: timedatectl
+    - name: install software packages
+      command: apt install software-properties-common
+    - name: add repository ppa:ondrej/php
+      apt_repository: repo="ppa:ondrej/php" state=present
+    - name: updating the repo
+      apt: update_cache=yes
+    - name: installing php8.1
+      apt: name=php7.4 state=present

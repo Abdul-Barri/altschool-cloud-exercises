@@ -1,0 +1,10 @@
+---
+- name: Hosting index.php on ec2 instance
+  hosts: ec2apache
+  remote_user: ubuntu
+  become: true
+  tasks:
+    - name: copy file from localhost to remote server
+      copy:
+        src: /home/vagrant/ansible/index.php
+        dest: /var/www/html/index.php
